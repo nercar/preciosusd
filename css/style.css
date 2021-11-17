@@ -1,0 +1,451 @@
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  line-height: 3;
+}
+
+* {
+  Box-sizing: Border-box;
+}
+
+/* 
+    Created on : 22-Jun-2015, 13:00:20
+    Author     : probinson
+    Based on    : https://codepen.io/schoenwaldnils/pen/JnIKA
+*/
+/*
+    following functions from
+    https://unindented.org/articles/trigonometry-in-sass/
+*/
+.circular-menu-container {
+  margin-top: 75px;
+  margin-bottom: 75px;
+  max-width: none;
+  width: auto;
+}
+
+.circular-menu {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  left: 75%; //Hacia la Derecha
+  margin: 0;
+  margin-left: -300px;
+  overflow: hidden;
+  border-radius: 300px;
+  border-radius: 50%;
+  z-index: 1;
+  list-style: none;
+  box-shadow: 0px 0px 15px #333;
+}
+
+.center-section {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -125px;
+  margin-left: -125px;
+  padding: 55px;
+  border-radius: 500px;
+  border-radius: 50%;
+  text-align: center;
+  background: #fff;
+  box-shadow: inset 0px 0px 15px #333;
+  display: none;
+  z-index: 1;
+}
+
+.center-section.section-intro {
+  display: block;
+}
+
+.circular-menu li:hover ~ .center-section.section-intro,
+.touch .circular-menu li:focus ~ .center-section.section-intro {
+  display: none;
+}
+
+.touch .circular-menu li:focus {
+  outline: 0;
+}
+
+.circular-menu li div.label {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  z-index: 2;
+}
+
+.circular-menu li div.label p {
+  text-align: center;
+  max-width: 118.8px;
+  margin: 0 auto;
+  margin-top: 72px;
+  color: #fff;
+}
+
+.circular-menu li span.arrow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: block;
+  transition: all 300ms ease-out;
+  z-index: 2;
+}
+
+.circular-menu li .bg {
+  width: 350px;
+  height: 300px;
+  position: absolute;
+  transform-origin: 0 300px;
+  margin-top: -300px;
+  left: 50%;
+  top: 50%;
+  transition: all 300ms ease-out;
+}
+
+.circular-menu li {
+  position: absolute;
+  text-decoration: none;
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+
+.circular-menu li:nth-child(1) {
+  display: block;
+}
+
+.circular-menu li:nth-child(1) .bg {
+  transform: rotate(-70deg) skew(-50deg);
+  background: #11703C;
+}
+
+.circular-menu li:nth-child(1):hover .bg,
+.touch .circular-menu li:nth-child(1):focus .bg {
+  background: #189c54;
+}
+
+.circular-menu li:nth-child(1) span.arrow {
+  transform: rotate(-45deg);
+  margin: -225px 0 0 -15px;
+  background: #11703C;
+}
+
+.circular-menu li:nth-child(1):hover span.arrow,
+.touch .circular-menu li:nth-child(1):focus span.arrow {
+  background: #189c54;
+  margin: -195px 0 0 -15px;
+}
+
+.circular-menu li:nth-child(1) div.label {
+  margin: -330px 0 0 -90px;
+}
+
+.circular-menu li:nth-child(1):hover div.center-section.section-1,
+.touch .circular-menu li:nth-child(1):focus div.center-section.section-1 {
+  display: block;
+}
+
+.circular-menu li:nth-child(2) {
+  display: block;
+}
+
+.circular-menu li:nth-child(2) .bg {
+  transform: rotate(-30deg) skew(-50deg);
+  background: #8A8D53;
+}
+
+.circular-menu li:nth-child(2):hover .bg,
+.touch .circular-menu li:nth-child(2):focus .bg {
+  background: #a5a86b;
+}
+
+.circular-menu li:nth-child(2) span.arrow {
+  transform: rotate(-5deg);
+  margin: -175.869333055px 0 0 119.9853980342px;
+  background: #8A8D53;
+}
+
+.circular-menu li:nth-child(2):hover span.arrow,
+.touch .circular-menu li:nth-child(2):focus span.arrow {
+  background: #a5a86b;
+  margin: -152.8879997614px 0 0 100.7017697436px;
+}
+
+.circular-menu li:nth-child(2) div.label {
+  margin: -273.8506663486px 0 0 64.2690263248px;
+}
+
+.circular-menu li:nth-child(2):hover div.center-section.section-2,
+.touch .circular-menu li:nth-child(2):focus div.center-section.section-2 {
+  display: block;
+}
+
+.circular-menu li:nth-child(3) {
+  display: block;
+}
+
+.circular-menu li:nth-child(3) .bg {
+  transform: rotate(10deg) skew(-50deg);
+  background: #B6238E;
+}
+
+.circular-menu li:nth-child(3):hover .bg,
+.touch .circular-menu li:nth-child(3):focus .bg {
+  background: #d834ab;
+}
+
+.circular-menu li:nth-child(3) span.arrow {
+  transform: rotate(35deg);
+  margin: -51.4661173101px 0 0 191.8096281326px;
+  background: #B6238E;
+}
+
+.circular-menu li:nth-child(3):hover span.arrow,
+.touch .circular-menu li:nth-child(3):focus span.arrow {
+  background: #d834ab;
+  margin: -46.25667198px 0 0 162.2653955422px;
+}
+
+.circular-menu li:nth-child(3) div.label {
+  margin: -131.6755626401px 0 0 146.3538607229px;
+}
+
+.circular-menu li:nth-child(3):hover div.center-section.section-3,
+.touch .circular-menu li:nth-child(3):focus div.center-section.section-3 {
+  display: block;
+}
+
+.circular-menu li:nth-child(4) {
+  display: block;
+}
+
+.circular-menu li:nth-child(4) .bg {
+  transform: rotate(50deg) skew(-50deg);
+  background: #5FC3BA;
+}
+
+.circular-menu li:nth-child(4):hover .bg,
+.touch .circular-menu li:nth-child(4):focus .bg {
+  background: #84d1ca;
+}
+
+.circular-menu li:nth-child(4) span.arrow {
+  transform: rotate(75deg);
+  margin: 90px 0 0 166.8653347947px;
+  background: #5FC3BA;
+}
+
+.circular-menu li:nth-child(4):hover span.arrow,
+.touch .circular-menu li:nth-child(4):focus span.arrow {
+  background: #84d1ca;
+  margin: 75px 0 0 140.8845726812px;
+}
+
+.circular-menu li:nth-child(4) div.label {
+  margin: 30px 0 0 117.8460969083px;
+}
+
+.circular-menu li:nth-child(4):hover div.center-section.section-4,
+.touch .circular-menu li:nth-child(4):focus div.center-section.section-4 {
+  display: block;
+}
+
+.circular-menu li:nth-child(5) {
+  display: block;
+}
+
+.circular-menu li:nth-child(5) .bg {
+  transform: rotate(90deg) skew(-50deg);
+  background: #9303ED;
+}
+
+.circular-menu li:nth-child(5):hover .bg,
+.touch .circular-menu li:nth-child(5):focus .bg {
+  background: #aa27fc;
+}
+
+.circular-menu li:nth-child(5) span.arrow {
+  transform: rotate(115deg);
+  margin: 182.335450365px 0 0 56.8242300984px;
+  background: #9303ED;
+}
+
+.circular-menu li:nth-child(5):hover span.arrow,
+.touch .circular-menu li:nth-child(5):focus span.arrow {
+  background: #aa27fc;
+  margin: 154.1446717415px 0 0 46.5636257986px;
+}
+
+.circular-menu li:nth-child(5) div.label {
+  margin: 135.5262289886px 0 0 -7.9151656019px;
+}
+
+.circular-menu li:nth-child(5):hover div.center-section.section-5,
+.touch .circular-menu li:nth-child(5):focus div.center-section.section-5 {
+  display: block;
+}
+
+.circular-menu li:nth-child(6) {
+  display: block;
+}
+
+.circular-menu li:nth-child(6) .bg {
+  transform: rotate(130deg) skew(-50deg);
+  background: #1FF8F2;
+}
+
+.circular-menu li:nth-child(6):hover .bg,
+.touch .circular-menu li:nth-child(6):focus .bg {
+  background: #50faf5;
+}
+
+.circular-menu li:nth-child(6) span.arrow {
+  transform: rotate(155deg);
+  margin: 182.335450365px 0 0 -86.8242300984px;
+  background: #1FF8F2;
+}
+
+.circular-menu li:nth-child(6):hover span.arrow,
+.touch .circular-menu li:nth-child(6):focus span.arrow {
+  background: #50faf5;
+  margin: 154.1446717415px 0 0 -76.5636257986px;
+}
+
+.circular-menu li:nth-child(6) div.label {
+  margin: 135.5262289886px 0 0 -172.0848343982px;
+}
+
+.circular-menu li:nth-child(6):hover div.center-section.section-6,
+.touch .circular-menu li:nth-child(6):focus div.center-section.section-6 {
+  display: block;
+}
+
+.circular-menu li:nth-child(7) {
+  display: block;
+}
+
+.circular-menu li:nth-child(7) .bg {
+  transform: rotate(170deg) skew(-50deg);
+  background: #58CE62;
+}
+
+.circular-menu li:nth-child(7):hover .bg,
+.touch .circular-menu li:nth-child(7):focus .bg {
+  background: #7fda87;
+}
+
+.circular-menu li:nth-child(7) span.arrow {
+  transform: rotate(195deg);
+  margin: 90px 0 0 -196.8653347945px;
+  background: #58CE62;
+}
+
+.circular-menu li:nth-child(7):hover span.arrow,
+.touch .circular-menu li:nth-child(7):focus span.arrow {
+  background: #7fda87;
+  margin: 75px 0 0 -170.884572681px;
+}
+
+.circular-menu li:nth-child(7) div.label {
+  margin: 30px 0 0 -297.846096908px;
+}
+
+.circular-menu li:nth-child(7):hover div.center-section.section-7,
+.touch .circular-menu li:nth-child(7):focus div.center-section.section-7 {
+  display: block;
+}
+
+.circular-menu li:nth-child(8) {
+  display: block;
+}
+
+.circular-menu li:nth-child(8) .bg {
+  transform: rotate(210deg) skew(-50deg);
+  background: #119451;
+}
+
+.circular-menu li:nth-child(8):hover .bg,
+.touch .circular-menu li:nth-child(8):focus .bg {
+  background: #16c26a;
+}
+
+.circular-menu li:nth-child(8) span.arrow {
+  transform: rotate(235deg);
+  margin: -51.4661173026px 0 0 -221.8096280805px;
+  background: #119451;
+}
+
+.circular-menu li:nth-child(8):hover span.arrow,
+.touch .circular-menu li:nth-child(8):focus span.arrow {
+  background: #16c26a;
+  margin: -46.2566719736px 0 0 -192.2653954975px;
+}
+
+.circular-menu li:nth-child(8) div.label {
+  margin: -131.6755626315px 0 0 -326.3538606634px;
+}
+
+.circular-menu li:nth-child(8):hover div.center-section.section-8,
+.touch .circular-menu li:nth-child(8):focus div.center-section.section-8 {
+  display: block;
+}
+
+.circular-menu li:nth-child(9) {
+  display: block;
+}
+
+.circular-menu li:nth-child(9) .bg {
+  transform: rotate(250deg) skew(-50deg);
+  background: #2B0EEC;
+}
+
+.circular-menu li:nth-child(9):hover .bg,
+.touch .circular-menu li:nth-child(9):focus .bg {
+  background: #523af3;
+}
+
+.circular-menu li:nth-child(9) span.arrow {
+  transform: rotate(275deg);
+  margin: -175.8693324509px 0 0 -149.985394581px;
+  background: #2B0EEC;
+}
+
+.circular-menu li:nth-child(9):hover span.arrow,
+.touch .circular-menu li:nth-child(9):focus span.arrow {
+  background: #523af3;
+  margin: -152.8879992437px 0 0 -130.7017667837px;
+}
+
+.circular-menu li:nth-child(9) div.label {
+  margin: -273.8506656582px 0 0 -244.2690223782px;
+}
+
+.circular-menu li:nth-child(9):hover div.center-section.section-9,
+.touch .circular-menu li:nth-child(9):focus div.center-section.section-9 {
+  display: block;
+}
+
+.animated {
+  animation-duration: 0.75s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
